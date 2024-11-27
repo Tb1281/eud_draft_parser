@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         # Personal Access Token으로 push 권한 설정
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GIT_PAT }}
     
     - name: Configure Git
       run: |
