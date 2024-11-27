@@ -1,5 +1,8 @@
 name: Sync and Run Other Repo Releases
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 0 * * *'  # 매일 자정 (00:00)에 실행되도록 설정
@@ -21,32 +24,31 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-    - name: Set up PowerShell
-      run: |
-        $ErrorActionPreference = "Stop"
+    # - name: Set up PowerShell
+    #   run: |
+    #     $ErrorActionPreference = "Stop"
         
     - name: Get all releases from another repo
       run: |
         $repo = "armoha/euddraft"  # 다른 사람의 레포지토리 이름
         $releases_url = "https://api.github.com/repos/$repo/releases"
-        echo $releases_url
         
         # 다른 사람의 릴리즈 목록 가져오기
         $releases = (Invoke-RestMethod -Uri $releases_url).tag_name
-        echo $releases
         
         # 내 레포지토리에서 이미 처리된 릴리즈 확인
         $processed_releases = git tag --list
 
         # 각 릴리즈마다 작업 수행
         foreach ($release in $releases) {
-          $zip_name = "$release.zip"
+          $zip_name = "euddraft$release.zip" -replace "euddraftv", "euddraft"
           $exe_name = "euddraft.exe"
           $json_name = "$release.json"
           $zip_url = "https://github.com/$repo/releases/download/$release/$zip_name"
           $zip_output = "$zip_name"
           $exe_output_folder = "$release"
           $json_output = "$exe_output_folder\$json_name"
+          echo $zip_url
 
           # zip 파일 다운로드
           Invoke-WebRequest -Uri $zip_url -OutFile $zip_output
@@ -71,7 +73,7 @@ jobs:
               # JSON 파일을 커밋하고 푸시
               git add $json_output
               git commit -m "$release"
-              git push origin HEAD:${{ github.ref_name }}
+              # git push origin HEAD:${{ github.ref_name }}
               
               # 해당 릴리즈를 처리 완료로 기록
               git tag $release
