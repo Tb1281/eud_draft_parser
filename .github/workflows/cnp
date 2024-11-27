@@ -1,0 +1,32 @@
+name: Create and Push File Workflow
+
+on:
+  workflow_dispatch:  # 수동으로 실행 가능하게 설정
+  
+jobs:
+  create-and-push:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        # Personal Access Token으로 push 권한 설정
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    
+    - name: Create new file
+      run: |
+        $timestamp = Get-Date -Format "yyyy-MM-dd-HH-mm-ss"
+        $content = "This file was created by GitHub Actions at $timestamp"
+        New-Item -Path "test-$timestamp.txt" -Value $content
+    
+    - name: Commit and push changes
+      run: |
+        git add .
+        git commit -m "Add new test file via GitHub Actions"
+        git push origin HEAD:${{ github.ref_name }}
