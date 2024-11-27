@@ -1,0 +1,85 @@
+name: Sync and Run Other Repo Releases
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 자정 (00:00)에 실행되도록 설정
+  workflow_dispatch:  # 수동으로 실행할 수 있도록 설정
+
+jobs:
+  download_and_run:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    - name: Set up PowerShell
+      run: |
+        $ErrorActionPreference = "Stop"
+        
+    - name: Get all releases from another repo
+      run: |
+        $repo = "armoha/euddraft"  # 다른 사람의 레포지토리 이름
+        $releases_url = "https://api.github.com/repos/$repo/releases"
+        echo $releases_url
+        
+        # 다른 사람의 릴리즈 목록 가져오기
+        $releases = (Invoke-RestMethod -Uri $releases_url).tag_name
+        echo $releases
+        
+        # 내 레포지토리에서 이미 처리된 릴리즈 확인
+        $processed_releases = git tag --list
+
+        # 각 릴리즈마다 작업 수행
+        foreach ($release in $releases) {
+          $zip_name = "$release.zip"
+          $exe_name = "euddraft.exe"
+          $json_name = "$release.json"
+          $zip_url = "https://github.com/$repo/releases/download/$release/$zip_name"
+          $zip_output = "C:\tmp\$zip_name"
+          $exe_output_folder = "C:\tmp\$release"
+          $json_output = "$exe_output_folder\$json_name"
+
+          # 내 레포지토리 클론
+          Write-Host "Cloning my repository to get additional files"
+          git clone https://github.com/my-user/my-repo.git C:\tmp
+
+          # zip 파일 다운로드
+          Invoke-WebRequest -Uri $zip_url -OutFile $zip_output
+          
+          # zip 파일 압축 풀기
+          Write-Host "Extracting $zip_name"
+          Expand-Archive -Path $zip_output -DestinationPath $exe_output_folder -Force
+
+          # 압축이 풀린 폴더에서 exe 파일 찾기
+          $exe_path = Get-ChildItem -Path $exe_output_folder -Filter "$exe_name" | Select-Object -First 1
+
+          if ($exe_path) {
+            Write-Host "Running $exe_name"
+            # exe 파일 실행
+            Start-Process -FilePath $exe_path.FullName -ArgumentList '.\EUDEditor.eds' -Wait
+            Rename-Item -Path '.\completions.json' -NewName 'json_name'
+            
+            # 실행 후 JSON 파일 존재하는지 확인
+            if (Test-Path $json_output) {
+              Write-Host "$json_name exists. Committing to repo."
+              
+              # Git 설정
+              git config --global user.name "Tb1281"
+              git config --global user.email "mail9595@jbnu.ac.kr"
+              
+              # JSON 파일을 커밋하고 푸시
+              git add $json_output
+              git commit -m "$release"
+              git push
+              
+              # 해당 릴리즈를 처리 완료로 기록
+              git tag $release
+              git push --tags
+            } else {
+              Write-Host "JSON file not found after running $exe_name"
+            }
+          } else {
+            Write-Host "No exe file found in $zip_name"
+          }
+        }

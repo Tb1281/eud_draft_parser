@@ -1,0 +1,5 @@
+[main]
+input: test.scx
+output: build/[EUD] test.scx
+[main.py]
+
