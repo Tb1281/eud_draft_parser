@@ -1,5 +1,8 @@
 name: Create and Push File Workflow
 
+permissions:
+  contents: write
+  
 on:
   workflow_dispatch:  # 수동으로 실행 가능하게 설정
   
