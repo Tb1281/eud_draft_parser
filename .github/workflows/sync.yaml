@@ -11,7 +11,15 @@ jobs:
 
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        # Personal Access Token으로 push 권한 설정
+        token: ${{ secrets.GIT_PAT }}
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
     - name: Set up PowerShell
       run: |
@@ -36,13 +44,9 @@ jobs:
           $exe_name = "euddraft.exe"
           $json_name = "$release.json"
           $zip_url = "https://github.com/$repo/releases/download/$release/$zip_name"
-          $zip_output = "C:\tmp\$zip_name"
-          $exe_output_folder = "C:\tmp\$release"
+          $zip_output = "$zip_name"
+          $exe_output_folder = "$release"
           $json_output = "$exe_output_folder\$json_name"
-
-          # 내 레포지토리 클론
-          Write-Host "Cloning my repository to get additional files"
-          git clone https://github.com/my-user/my-repo.git C:\tmp
 
           # zip 파일 다운로드
           Invoke-WebRequest -Uri $zip_url -OutFile $zip_output
@@ -63,15 +67,11 @@ jobs:
             # 실행 후 JSON 파일 존재하는지 확인
             if (Test-Path $json_output) {
               Write-Host "$json_name exists. Committing to repo."
-              
-              # Git 설정
-              git config --global user.name "Tb1281"
-              git config --global user.email "mail9595@jbnu.ac.kr"
-              
+
               # JSON 파일을 커밋하고 푸시
               git add $json_output
               git commit -m "$release"
-              git push
+              git push origin HEAD:${{ github.ref_name }}
               
               # 해당 릴리즈를 처리 완료로 기록
               git tag $release
