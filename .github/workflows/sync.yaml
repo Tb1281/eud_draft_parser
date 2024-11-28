@@ -64,6 +64,7 @@ jobs:
             if ($exe_path) {
               Write-Host "Running $exe_name"
               # exe 파일 실행
+              Start-Process cmd -ArgumentList '/c echo |', $exe_path.FullName, '.\src\EUDEditor.eds' -Wait
               cmd /c $exe_path.FullName '.\src\EUDEditor.eds'
                if (Test-Path $json_name) {
                   Remove-Item -Path $json_name -Force
@@ -80,7 +81,6 @@ jobs:
                 
                 # 해당 릴리즈를 처리 완료로 기록
                 git tag $release
-                git push origin main
                 git push --tags
               } else {
                 Write-Host "JSON file not found after running $exe_name"
@@ -92,3 +92,7 @@ jobs:
             Write-Host "No zip file found"
           }
         }
+
+        # 커밋 푸시
+        git push origin main
+
