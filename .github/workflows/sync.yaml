@@ -60,7 +60,7 @@ jobs:
             if ($exe_path) {
               Write-Host "Running $exe_name"
               # exe 파일 실행
-              cmd '/c echo |', $exe_path.FullName, '.\src\EUDEditor.eds'
+              cmd /c echo | &($exe_path.FullName) '.\src\EUDEditor.eds'
               
               Write-Host "Creating $json_name"
               Rename-Item -Path '.\output.json' -NewName $json_name -Force
