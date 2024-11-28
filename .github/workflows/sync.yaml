@@ -38,14 +38,14 @@ jobs:
 
         # 각 릴리즈마다 작업 수행
         foreach ($release in $releases) {
-          if ($processed_releases -contains $release) {
-            Write-Host "Skipping $release"
-            continue
-          }
-          
           $zip_name = "euddraft$release.zip" -replace "euddraftv", "euddraft"
           $exe_name = "euddraft.exe"
           $json_name = "$release.json"
+          if (Test-Path $json_name) {
+            Write-Host "Skipping $release"
+            continue
+          }
+
           $zip_url = "https://github.com/$repo/releases/download/$release/$zip_name"
           $zip_output = "$zip_name"
           $exe_output_folder = "$zip_output" -replace ".zip", ""
@@ -78,10 +78,6 @@ jobs:
                 # JSON 파일을 커밋
                 git add $json_name
                 git commit -m "$release"
-                
-                # 해당 릴리즈를 처리 완료로 기록
-                git tag $release
-                git push --tags
               } else {
                 Write-Host "JSON file not found after running $exe_name"
               }
