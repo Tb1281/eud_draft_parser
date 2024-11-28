@@ -80,6 +80,7 @@ jobs:
                 
                 # 해당 릴리즈를 처리 완료로 기록
                 git tag $release
+                git push origin main
                 git push --tags
               } else {
                 Write-Host "JSON file not found after running $exe_name"
