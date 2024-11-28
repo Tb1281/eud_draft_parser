@@ -59,12 +59,12 @@ jobs:
 
             if ($exe_path) {
               Write-Host "Disabling auto-update"
-              if (Test-Path "$zip_name\vcheckpoint.dat") {
-                Remove-Item "$zip_name\vcheckpoint.dat"
+              if (Test-Path "$exe_output_folder\vcheckpoint.dat") {
+                Remove-Item "$exe_output_folder\vcheckpoint.dat"
               }
               $timestamp = [math]::Round(((Get-Date) - (Get-Date "1970-01-01 00:00:00")).TotalSeconds)
-              New-Item -Path "$zip_name\vcheckpoint.dat" -Value "$timestamp $timestamp"
-              
+              New-Item -Path "$exe_output_folder\vcheckpoint.dat" -Value "$timestamp $timestamp"
+
               Write-Host "Running $exe_name"
               # exe 파일 실행
               cmd /c echo | &($exe_path.FullName) '.\src\EUDEditor.eds'
