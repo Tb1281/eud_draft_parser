@@ -46,6 +46,7 @@ jobs:
           $exe_output_folder = "$zip_name" -replace ".zip", ""
 
           # zip 파일 다운로드
+          Write-Host "Downloading $zip_name"
           Invoke-WebRequest -Uri $zip_url -OutFile $zip_name
           
           if (Test-Path $zip_name) {
@@ -59,7 +60,7 @@ jobs:
             if ($exe_path) {
               Write-Host "Running $exe_name"
               # exe 파일 실행
-              Start-Process cmd -ArgumentList '/c echo |', $exe_path.FullName, '.\src\EUDEditor.eds' -Wait
+              cmd '/c echo |', $exe_path.FullName, '.\src\EUDEditor.eds'
               
               Write-Host "Creating $json_name"
               Rename-Item -Path '.\output.json' -NewName $json_name -Force
