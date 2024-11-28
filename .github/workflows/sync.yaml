@@ -58,11 +58,17 @@ jobs:
             $exe_path = Get-ChildItem -Path $exe_output_folder -Filter "$exe_name" | Select-Object -First 1
 
             if ($exe_path) {
+              Write-Host "Disabling auto-update"
+              if (Test-Path "$zip_name\vcheckpoint.dat") {
+                Remove-Item "$zip_name\vcheckpoint.dat"
+              }
+              $timestamp = [math]::Round(((Get-Date) - (Get-Date "1970-01-01 00:00:00")).TotalSeconds)
+              New-Item -Path "$zip_name\vcheckpoint.dat" -Value "$timestamp $timestamp"
+              
               Write-Host "Running $exe_name"
               # exe 파일 실행
               cmd /c echo | &($exe_path.FullName) '.\src\EUDEditor.eds'
               
-              Write-Host "Creating $json_name"
               Rename-Item -Path '.\output.json' -NewName $json_name -Force
               
               # 실행 후 JSON 파일 존재하는지 확인
