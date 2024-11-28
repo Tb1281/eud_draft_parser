@@ -34,7 +34,7 @@ jobs:
         
         # 내 레포지토리에서 이미 처리된 릴리즈 확인
         $processed_releases = git tag --list
-        Write-Host $processed_releases
+        Write-Host "Processed releases: $processed_releases"
 
         # 각 릴리즈마다 작업 수행
         foreach ($release in $releases) {
