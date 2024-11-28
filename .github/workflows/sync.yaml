@@ -21,8 +21,8 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "Tb1281"
+        git config --global user.email "mail9595@jbnu.ac.kr"
         
     - name: Get all releases from another repo
       run: |
@@ -75,7 +75,7 @@ jobs:
               if (Test-Path $json_name) {
                 Write-Host "$json_name exists. Committing to repo."
 
-                # JSON 파일을 커밋하고 푸시
+                # JSON 파일을 커밋
                 git add $json_name
                 git commit -m "$release"
                 
