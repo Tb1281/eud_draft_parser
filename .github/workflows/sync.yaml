@@ -65,6 +65,9 @@ jobs:
               Write-Host "Running $exe_name"
               # exe 파일 실행
               cmd /c $exe_path.FullName '.\src\EUDEditor.eds'
+               if (Test-Path $json_name) {
+                  Remove-Item -Path $json_name -Force
+              }
               Rename-Item -Path '.\output.json' -NewName $json_name -Force
               
               # 실행 후 JSON 파일 존재하는지 확인
