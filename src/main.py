@@ -117,16 +117,14 @@ class CompletionGenerator:
         except Exception as e:
             print(e)
                 
-    def save_completions(self, output_file):
+    def save_completions(self):
         """결과를 JSON 파일로 저장"""
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open("../output.json", 'w', encoding='utf-8') as f:
             json.dump(self.completions, f, indent=2, ensure_ascii=False)
 
 def main():
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "completions.json"
-    
     generator = CompletionGenerator()
     generator.scan_libraries()
-    generator.save_completions(output_file)
+    generator.save_completions()
 
 main()

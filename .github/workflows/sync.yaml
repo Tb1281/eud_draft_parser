@@ -58,8 +58,8 @@ jobs:
             if ($exe_path) {
               Write-Host "Running $exe_name"
               # exe 파일 실행
-              Start-Process -FilePath $exe_path.FullName -ArgumentList '.\EUDEditor.eds' -Wait
-              Rename-Item -Path '.\completions.json' -NewName $json_name
+              cmd /c $exe_path.FullName '.\src\EUDEditor.eds'
+              Rename-Item -Path '.\output.json' -NewName $json_name
               
               # 실행 후 JSON 파일 존재하는지 확인
               if (Test-Path $json_name) {
