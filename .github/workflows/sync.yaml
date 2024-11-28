@@ -27,11 +27,18 @@ jobs:
     - name: Get all releases from another repo
       run: |
         $repo = "armoha/euddraft"  #euddraft repo
-        $releases_url = "https://api.github.com/repos/$repo/releases"
-        
+        $releases_url = "https://api.github.com/repos/$repo/releases?"
+        $releases = @()
+
         # 다른 사람의 릴리즈 목록 가져오기
-        $releases = (Invoke-RestMethod -Uri $releases_url).tag_name
-        
+        $page = 1
+        do {
+            $current_page_url = "$releases_url&page=$page"
+            $current_releases = (Invoke-RestMethod -Uri $current_page_url).tag_name
+            $releases += $current_releases
+            $page++
+        } while ($current_releases.Count -gt 0)
+
         # 각 릴리즈마다 작업 수행
         foreach ($release in $releases) {
           $zip_name = "euddraft$release.zip" -replace "euddraftv", "euddraft"
@@ -66,11 +73,8 @@ jobs:
 
             if ($exe_path) {
               Write-Host "Disabling auto-update"
-              if (Test-Path "$exe_output_folder\vcheckpoint.dat") {
-                Remove-Item "$exe_output_folder\vcheckpoint.dat"
-              }
               $timestamp = [math]::Round(((Get-Date) - (Get-Date "1970-01-01 00:00:00")).TotalSeconds)
-              New-Item -Path "$exe_output_folder\vcheckpoint.dat" -Value "$timestamp $timestamp"
+              Set-Content -Path "$exe_output_folder\vcheckpoint.dat" -Value "$timestamp $timestamp"
 
               # exe 파일 실행
               Write-Host "Running $exe_name"
