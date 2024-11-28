@@ -1,0 +1,2872 @@
+{
+  "built_ins": {
+    "clear": {
+      "type": "built_in",
+      "doc": "D.clear() -> None.  Remove all items from D."
+    },
+    "copy": {
+      "type": "built_in",
+      "doc": "D.copy() -> a shallow copy of D"
+    },
+    "fromkeys": {
+      "type": "built_in",
+      "doc": "Create a new dictionary with keys from iterable and values set to value."
+    },
+    "get": {
+      "type": "built_in",
+      "doc": "Return the value for key if key is in the dictionary, else default."
+    },
+    "items": {
+      "type": "built_in",
+      "doc": "D.items() -> a set-like object providing a view on D's items"
+    },
+    "keys": {
+      "type": "built_in",
+      "doc": "D.keys() -> a set-like object providing a view on D's keys"
+    },
+    "pop": {
+      "type": "built_in",
+      "doc": "D.pop(k[,d]) -> v, remove specified key and return the corresponding value."
+    },
+    "popitem": {
+      "type": "built_in",
+      "doc": "Remove and return a (key, value) pair as a 2-tuple."
+    },
+    "setdefault": {
+      "type": "built_in",
+      "doc": "Insert key with a value of default if key is not in the dictionary."
+    },
+    "update": {
+      "type": "built_in",
+      "doc": "D.update([E, ]**F) -> None.  Update D from dict/iterable E and F."
+    },
+    "values": {
+      "type": "built_in",
+      "doc": "D.values() -> an object providing a view on D's values"
+    }
+  },
+  "keywords": {
+    "False": {
+      "type": "keyword"
+    },
+    "None": {
+      "type": "keyword"
+    },
+    "True": {
+      "type": "keyword"
+    },
+    "and": {
+      "type": "keyword"
+    },
+    "as": {
+      "type": "keyword"
+    },
+    "assert": {
+      "type": "keyword"
+    },
+    "async": {
+      "type": "keyword"
+    },
+    "await": {
+      "type": "keyword"
+    },
+    "break": {
+      "type": "keyword"
+    },
+    "class": {
+      "type": "keyword"
+    },
+    "continue": {
+      "type": "keyword"
+    },
+    "def": {
+      "type": "keyword"
+    },
+    "del": {
+      "type": "keyword"
+    },
+    "elif": {
+      "type": "keyword"
+    },
+    "else": {
+      "type": "keyword"
+    },
+    "except": {
+      "type": "keyword"
+    },
+    "finally": {
+      "type": "keyword"
+    },
+    "for": {
+      "type": "keyword"
+    },
+    "from": {
+      "type": "keyword"
+    },
+    "global": {
+      "type": "keyword"
+    },
+    "if": {
+      "type": "keyword"
+    },
+    "import": {
+      "type": "keyword"
+    },
+    "in": {
+      "type": "keyword"
+    },
+    "is": {
+      "type": "keyword"
+    },
+    "lambda": {
+      "type": "keyword"
+    },
+    "nonlocal": {
+      "type": "keyword"
+    },
+    "not": {
+      "type": "keyword"
+    },
+    "or": {
+      "type": "keyword"
+    },
+    "pass": {
+      "type": "keyword"
+    },
+    "raise": {
+      "type": "keyword"
+    },
+    "return": {
+      "type": "keyword"
+    },
+    "try": {
+      "type": "keyword"
+    },
+    "while": {
+      "type": "keyword"
+    },
+    "with": {
+      "type": "keyword"
+    },
+    "yield": {
+      "type": "keyword"
+    }
+  },
+  "libraries": {
+    "sys": {
+      "type": "module",
+      "doc": "This module provides access to some objects used or maintained by the"
+    },
+    "builtins": {
+      "type": "module",
+      "doc": "Built-in functions, types, exceptions, and other objects."
+    },
+    "winreg": {
+      "type": "module",
+      "doc": "This module provides access to the Windows registry API."
+    },
+    "marshal": {
+      "type": "module",
+      "doc": "This module contains functions that can read and write Python values in"
+    },
+    "nt": {
+      "type": "module",
+      "doc": "This module provides access to operating system functionality that is"
+    },
+    "time": {
+      "type": "module",
+      "doc": "This module provides various functions to manipulate time values."
+    },
+    "zipimport": {
+      "type": "module",
+      "doc": "zipimport provides support for importing Python modules from Zip archives."
+    },
+    "zlib": {
+      "type": "module",
+      "doc": "The functions in this module allow compression and decompression using the"
+    },
+    "codecs": {
+      "type": "module",
+      "doc": " codecs -- Python Codec Registry, API and helpers."
+    },
+    "encodings.aliases": {
+      "type": "module",
+      "doc": ""
+    },
+    "encodings": {
+      "type": "module",
+      "doc": ""
+    },
+    "encodings.utf_8": {
+      "type": "module",
+      "doc": ""
+    },
+    "encodings.cp949": {
+      "type": "module",
+      "doc": ""
+    },
+    "abc": {
+      "type": "module",
+      "doc": "Abstract Base Classes (ABCs) according to PEP 3119."
+    },
+    "io": {
+      "type": "module",
+      "doc": "The io module provides the Python interfaces to stream handling. The"
+    },
+    "stat": {
+      "type": "module",
+      "doc": "Constants/functions for interpreting results of os.stat() and os.lstat()."
+    },
+    "genericpath": {
+      "type": "module",
+      "doc": ""
+    },
+    "ntpath": {
+      "type": "module",
+      "doc": "Common pathname manipulations, WindowsNT/95 version."
+    },
+    "os.path": {
+      "type": "module",
+      "doc": "Common pathname manipulations, WindowsNT/95 version."
+    },
+    "os": {
+      "type": "module",
+      "doc": "OS routines for NT or Posix depending on what system we're on."
+    }
+  },
+  "functions": {
+    "excepthook": {
+      "signature": "(type_: type[BaseException], value: BaseException, traceback: traceback | None) -> None",
+      "doc": "",
+      "module": "sys"
+    },
+    "unraisablehook": {
+      "signature": "(unraisable: Any) -> None",
+      "doc": "",
+      "module": "sys"
+    },
+    "EncodedFile": {
+      "signature": "(file, data_encoding, file_encoding=None, errors='strict')",
+      "doc": " Return a wrapped version of file which provides transparent",
+      "module": "codecs"
+    },
+    "getdecoder": {
+      "signature": "(encoding)",
+      "doc": " Lookup up the codec for the given encoding and return",
+      "module": "codecs"
+    },
+    "getencoder": {
+      "signature": "(encoding)",
+      "doc": " Lookup up the codec for the given encoding and return",
+      "module": "codecs"
+    },
+    "getincrementaldecoder": {
+      "signature": "(encoding)",
+      "doc": " Lookup up the codec for the given encoding and return",
+      "module": "codecs"
+    },
+    "getincrementalencoder": {
+      "signature": "(encoding)",
+      "doc": " Lookup up the codec for the given encoding and return",
+      "module": "codecs"
+    },
+    "getreader": {
+      "signature": "(encoding)",
+      "doc": " Lookup up the codec for the given encoding and return",
+      "module": "codecs"
+    },
+    "getwriter": {
+      "signature": "(encoding)",
+      "doc": " Lookup up the codec for the given encoding and return",
+      "module": "codecs"
+    },
+    "iterdecode": {
+      "signature": "(iterator, encoding, errors='strict', **kwargs)",
+      "doc": "",
+      "module": "codecs"
+    },
+    "iterencode": {
+      "signature": "(iterator, encoding, errors='strict', **kwargs)",
+      "doc": "",
+      "module": "codecs"
+    },
+    "make_encoding_map": {
+      "signature": "(decoding_map)",
+      "doc": " Creates an encoding map from a decoding map.",
+      "module": "codecs"
+    },
+    "make_identity_dict": {
+      "signature": "(rng)",
+      "doc": " make_identity_dict(rng) -> dict",
+      "module": "codecs"
+    },
+    "open": {
+      "signature": "(filename, mode='r', encoding=None, errors='strict', buffering=-1)",
+      "doc": " Open an encoded file using the given mode and return",
+      "module": "codecs"
+    },
+    "normalize_encoding": {
+      "signature": "(encoding)",
+      "doc": "",
+      "module": "encodings"
+    },
+    "search_function": {
+      "signature": "(encoding)",
+      "doc": "",
+      "module": "encodings"
+    },
+    "decode": {
+      "signature": "(input, errors='strict')",
+      "doc": "",
+      "module": "encodings.utf_8"
+    },
+    "getregentry": {
+      "signature": "()",
+      "doc": "",
+      "module": "encodings.cp949"
+    },
+    "abstractmethod": {
+      "signature": "(funcobj)",
+      "doc": "A decorator indicating abstract methods.",
+      "module": "abc"
+    },
+    "update_abstractmethods": {
+      "signature": "(cls)",
+      "doc": "Recalculate the set of abstract methods of an abstract class.",
+      "module": "abc"
+    },
+    "commonprefix": {
+      "signature": "(m)",
+      "doc": "Given a list of pathnames, returns the longest common leading component",
+      "module": "os.path"
+    },
+    "exists": {
+      "signature": "(path)",
+      "doc": "Test whether a path exists.  Returns False for broken symbolic links",
+      "module": "os.path"
+    },
+    "getatime": {
+      "signature": "(filename)",
+      "doc": "Return the last access time of a file, reported by os.stat().",
+      "module": "os.path"
+    },
+    "getctime": {
+      "signature": "(filename)",
+      "doc": "Return the metadata change time of a file, reported by os.stat().",
+      "module": "os.path"
+    },
+    "getmtime": {
+      "signature": "(filename)",
+      "doc": "Return the last modification time of a file, reported by os.stat().",
+      "module": "os.path"
+    },
+    "getsize": {
+      "signature": "(filename)",
+      "doc": "Return the size of a file, reported by os.stat().",
+      "module": "os.path"
+    },
+    "isdir": {
+      "signature": "(s)",
+      "doc": "Return true if the pathname refers to an existing directory.",
+      "module": "os.path"
+    },
+    "isfile": {
+      "signature": "(path)",
+      "doc": "Test whether a path is a regular file",
+      "module": "os.path"
+    },
+    "samefile": {
+      "signature": "(f1, f2)",
+      "doc": "Test whether two pathnames reference the same actual file or directory",
+      "module": "os.path"
+    },
+    "sameopenfile": {
+      "signature": "(fp1, fp2)",
+      "doc": "Test whether two open file objects reference the same file",
+      "module": "os.path"
+    },
+    "samestat": {
+      "signature": "(s1, s2)",
+      "doc": "Test whether two stat buffers reference the same file",
+      "module": "os.path"
+    },
+    "abspath": {
+      "signature": "(path)",
+      "doc": "Return the absolute version of a path.",
+      "module": "os.path"
+    },
+    "basename": {
+      "signature": "(p)",
+      "doc": "Returns the final component of a pathname",
+      "module": "os.path"
+    },
+    "commonpath": {
+      "signature": "(paths)",
+      "doc": "Given a sequence of path names, returns the longest common sub-path.",
+      "module": "os.path"
+    },
+    "dirname": {
+      "signature": "(p)",
+      "doc": "Returns the directory component of a pathname",
+      "module": "os.path"
+    },
+    "expanduser": {
+      "signature": "(path)",
+      "doc": "Expand ~ and ~user constructs.",
+      "module": "os.path"
+    },
+    "expandvars": {
+      "signature": "(path)",
+      "doc": "Expand shell variables of the forms $var, ${var} and %var%.",
+      "module": "os.path"
+    },
+    "isabs": {
+      "signature": "(s)",
+      "doc": "Test whether a path is absolute",
+      "module": "os.path"
+    },
+    "islink": {
+      "signature": "(path)",
+      "doc": "Test whether a path is a symbolic link.",
+      "module": "os.path"
+    },
+    "ismount": {
+      "signature": "(path)",
+      "doc": "Test whether a path is a mount point (a drive root, the root of a",
+      "module": "os.path"
+    },
+    "join": {
+      "signature": "(path, *paths)",
+      "doc": "",
+      "module": "os.path"
+    },
+    "lexists": {
+      "signature": "(path)",
+      "doc": "Test whether a path exists.  Returns True for broken symbolic links",
+      "module": "os.path"
+    },
+    "normcase": {
+      "signature": "(s)",
+      "doc": "Normalize case of pathname.",
+      "module": "os.path"
+    },
+    "normpath": {
+      "signature": "(path)",
+      "doc": "Normalize path, eliminating double slashes, etc.",
+      "module": "os.path"
+    },
+    "realpath": {
+      "signature": "(path, *, strict=False)",
+      "doc": "",
+      "module": "os.path"
+    },
+    "relpath": {
+      "signature": "(path, start=None)",
+      "doc": "Return a relative version of a path",
+      "module": "os.path"
+    },
+    "split": {
+      "signature": "(p)",
+      "doc": "Split a pathname.",
+      "module": "os.path"
+    },
+    "splitdrive": {
+      "signature": "(p)",
+      "doc": "Split a pathname into drive/UNC sharepoint and relative path specifiers.",
+      "module": "os.path"
+    },
+    "splitext": {
+      "signature": "(p)",
+      "doc": "Split the extension from a pathname.",
+      "module": "os.path"
+    },
+    "add_dll_directory": {
+      "signature": "(path)",
+      "doc": "Add a path to the DLL search path.",
+      "module": "os"
+    },
+    "execl": {
+      "signature": "(file, *args)",
+      "doc": "execl(file, *args)",
+      "module": "os"
+    },
+    "execle": {
+      "signature": "(file, *args)",
+      "doc": "execle(file, *args, env)",
+      "module": "os"
+    },
+    "execlp": {
+      "signature": "(file, *args)",
+      "doc": "execlp(file, *args)",
+      "module": "os"
+    },
+    "execlpe": {
+      "signature": "(file, *args)",
+      "doc": "execlpe(file, *args, env)",
+      "module": "os"
+    },
+    "execvp": {
+      "signature": "(file, args)",
+      "doc": "execvp(file, args)",
+      "module": "os"
+    },
+    "execvpe": {
+      "signature": "(file, args, env)",
+      "doc": "execvpe(file, args, env)",
+      "module": "os"
+    },
+    "fdopen": {
+      "signature": "(fd, mode='r', buffering=-1, encoding=None, *args, **kwargs)",
+      "doc": "",
+      "module": "os"
+    },
+    "fsdecode": {
+      "signature": "(filename)",
+      "doc": "Decode filename (an os.PathLike, bytes, or str) from the filesystem",
+      "module": "os"
+    },
+    "fsencode": {
+      "signature": "(filename)",
+      "doc": "Encode filename (an os.PathLike, bytes, or str) to the filesystem",
+      "module": "os"
+    },
+    "get_exec_path": {
+      "signature": "(env=None)",
+      "doc": "Returns the sequence of directories that will be searched for the",
+      "module": "os"
+    },
+    "getenv": {
+      "signature": "(key, default=None)",
+      "doc": "Get an environment variable, return None if it doesn't exist.",
+      "module": "os"
+    },
+    "makedirs": {
+      "signature": "(name, mode=511, exist_ok=False)",
+      "doc": "makedirs(name [, mode=0o777][, exist_ok=False])",
+      "module": "os"
+    },
+    "popen": {
+      "signature": "(cmd, mode='r', buffering=-1)",
+      "doc": "",
+      "module": "os"
+    },
+    "removedirs": {
+      "signature": "(name)",
+      "doc": "removedirs(name)",
+      "module": "os"
+    },
+    "renames": {
+      "signature": "(old, new)",
+      "doc": "renames(old, new)",
+      "module": "os"
+    },
+    "spawnl": {
+      "signature": "(mode, file, *args)",
+      "doc": "spawnl(mode, file, *args) -> integer",
+      "module": "os"
+    },
+    "spawnle": {
+      "signature": "(mode, file, *args)",
+      "doc": "spawnle(mode, file, *args, env) -> integer",
+      "module": "os"
+    },
+    "walk": {
+      "signature": "(top, topdown=True, onerror=None, followlinks=False)",
+      "doc": "Directory tree generator.",
+      "module": "os"
+    }
+  },
+  "classes": {
+    "ArithmeticError": {
+      "methods": {},
+      "doc": "Base class for arithmetic errors.",
+      "module": "builtins"
+    },
+    "AssertionError": {
+      "methods": {},
+      "doc": "Assertion failed.",
+      "module": "builtins"
+    },
+    "AttributeError": {
+      "methods": {},
+      "doc": "Attribute not found.",
+      "module": "builtins"
+    },
+    "BaseException": {
+      "methods": {},
+      "doc": "Common base class for all exceptions",
+      "module": "builtins"
+    },
+    "BaseExceptionGroup": {
+      "methods": {},
+      "doc": "A combination of multiple unrelated exceptions.",
+      "module": "builtins"
+    },
+    "BlockingIOError": {
+      "methods": {},
+      "doc": "I/O operation would block.",
+      "module": "io"
+    },
+    "BrokenPipeError": {
+      "methods": {},
+      "doc": "Broken pipe.",
+      "module": "builtins"
+    },
+    "BufferError": {
+      "methods": {},
+      "doc": "Buffer error.",
+      "module": "builtins"
+    },
+    "BytesWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about bytes and buffer related problems, mostly",
+      "module": "builtins"
+    },
+    "ChildProcessError": {
+      "methods": {},
+      "doc": "Child process error.",
+      "module": "builtins"
+    },
+    "ConnectionAbortedError": {
+      "methods": {},
+      "doc": "Connection aborted.",
+      "module": "builtins"
+    },
+    "ConnectionError": {
+      "methods": {},
+      "doc": "Connection error.",
+      "module": "builtins"
+    },
+    "ConnectionRefusedError": {
+      "methods": {},
+      "doc": "Connection refused.",
+      "module": "builtins"
+    },
+    "ConnectionResetError": {
+      "methods": {},
+      "doc": "Connection reset.",
+      "module": "builtins"
+    },
+    "DeprecationWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about deprecated features.",
+      "module": "builtins"
+    },
+    "EOFError": {
+      "methods": {},
+      "doc": "Read beyond end of file.",
+      "module": "builtins"
+    },
+    "EncodingWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about encodings.",
+      "module": "builtins"
+    },
+    "EnvironmentError": {
+      "methods": {},
+      "doc": "Base class for I/O related errors.",
+      "module": "builtins"
+    },
+    "Exception": {
+      "methods": {},
+      "doc": "Common base class for all non-exit exceptions.",
+      "module": "builtins"
+    },
+    "ExceptionGroup": {
+      "methods": {},
+      "doc": "",
+      "module": "builtins"
+    },
+    "FileExistsError": {
+      "methods": {},
+      "doc": "File already exists.",
+      "module": "builtins"
+    },
+    "FileNotFoundError": {
+      "methods": {},
+      "doc": "File not found.",
+      "module": "builtins"
+    },
+    "FloatingPointError": {
+      "methods": {},
+      "doc": "Floating point operation failed.",
+      "module": "builtins"
+    },
+    "FutureWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about constructs that will change semantically",
+      "module": "builtins"
+    },
+    "GeneratorExit": {
+      "methods": {},
+      "doc": "Request that a generator exit.",
+      "module": "builtins"
+    },
+    "IOError": {
+      "methods": {},
+      "doc": "Base class for I/O related errors.",
+      "module": "builtins"
+    },
+    "ImportError": {
+      "methods": {},
+      "doc": "Import can't find module, or can't find name in module.",
+      "module": "builtins"
+    },
+    "ImportWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about probable mistakes in module imports",
+      "module": "builtins"
+    },
+    "IndentationError": {
+      "methods": {},
+      "doc": "Improper indentation.",
+      "module": "builtins"
+    },
+    "IndexError": {
+      "methods": {},
+      "doc": "Sequence index out of range.",
+      "module": "builtins"
+    },
+    "InterruptedError": {
+      "methods": {},
+      "doc": "Interrupted by signal.",
+      "module": "builtins"
+    },
+    "IsADirectoryError": {
+      "methods": {},
+      "doc": "Operation doesn't work on directories.",
+      "module": "builtins"
+    },
+    "KeyError": {
+      "methods": {},
+      "doc": "Mapping key not found.",
+      "module": "builtins"
+    },
+    "KeyboardInterrupt": {
+      "methods": {},
+      "doc": "Program interrupted by user.",
+      "module": "builtins"
+    },
+    "LookupError": {
+      "methods": {},
+      "doc": "Base class for lookup errors.",
+      "module": "builtins"
+    },
+    "MemoryError": {
+      "methods": {},
+      "doc": "Out of memory.",
+      "module": "builtins"
+    },
+    "ModuleNotFoundError": {
+      "methods": {},
+      "doc": "Module not found.",
+      "module": "builtins"
+    },
+    "NameError": {
+      "methods": {},
+      "doc": "Name not found globally.",
+      "module": "builtins"
+    },
+    "NotADirectoryError": {
+      "methods": {},
+      "doc": "Operation only works on directories.",
+      "module": "builtins"
+    },
+    "NotImplementedError": {
+      "methods": {},
+      "doc": "Method or function hasn't been implemented yet.",
+      "module": "builtins"
+    },
+    "OSError": {
+      "methods": {},
+      "doc": "Base class for I/O related errors.",
+      "module": "builtins"
+    },
+    "OverflowError": {
+      "methods": {},
+      "doc": "Result too large to be represented.",
+      "module": "builtins"
+    },
+    "PendingDeprecationWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about features which will be deprecated",
+      "module": "builtins"
+    },
+    "PermissionError": {
+      "methods": {},
+      "doc": "Not enough permissions.",
+      "module": "builtins"
+    },
+    "ProcessLookupError": {
+      "methods": {},
+      "doc": "Process not found.",
+      "module": "builtins"
+    },
+    "RecursionError": {
+      "methods": {},
+      "doc": "Recursion limit exceeded.",
+      "module": "builtins"
+    },
+    "ReferenceError": {
+      "methods": {},
+      "doc": "Weak ref proxy used after referent went away.",
+      "module": "builtins"
+    },
+    "ResourceWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about resource usage.",
+      "module": "builtins"
+    },
+    "RuntimeError": {
+      "methods": {},
+      "doc": "Unspecified run-time error.",
+      "module": "builtins"
+    },
+    "RuntimeWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about dubious runtime behavior.",
+      "module": "builtins"
+    },
+    "StopAsyncIteration": {
+      "methods": {},
+      "doc": "Signal the end from iterator.__anext__().",
+      "module": "builtins"
+    },
+    "StopIteration": {
+      "methods": {},
+      "doc": "Signal the end from iterator.__next__().",
+      "module": "builtins"
+    },
+    "SyntaxError": {
+      "methods": {},
+      "doc": "Invalid syntax.",
+      "module": "builtins"
+    },
+    "SyntaxWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about dubious syntax.",
+      "module": "builtins"
+    },
+    "SystemError": {
+      "methods": {},
+      "doc": "Internal error in the Python interpreter.",
+      "module": "builtins"
+    },
+    "SystemExit": {
+      "methods": {},
+      "doc": "Request to exit from the interpreter.",
+      "module": "builtins"
+    },
+    "TabError": {
+      "methods": {},
+      "doc": "Improper mixture of spaces and tabs.",
+      "module": "builtins"
+    },
+    "TimeoutError": {
+      "methods": {},
+      "doc": "Timeout expired.",
+      "module": "builtins"
+    },
+    "TypeError": {
+      "methods": {},
+      "doc": "Inappropriate argument type.",
+      "module": "builtins"
+    },
+    "UnboundLocalError": {
+      "methods": {},
+      "doc": "Local name referenced but not bound to a value.",
+      "module": "builtins"
+    },
+    "UnicodeDecodeError": {
+      "methods": {},
+      "doc": "Unicode decoding error.",
+      "module": "builtins"
+    },
+    "UnicodeEncodeError": {
+      "methods": {},
+      "doc": "Unicode encoding error.",
+      "module": "builtins"
+    },
+    "UnicodeError": {
+      "methods": {},
+      "doc": "Unicode related error.",
+      "module": "builtins"
+    },
+    "UnicodeTranslateError": {
+      "methods": {},
+      "doc": "Unicode translation error.",
+      "module": "builtins"
+    },
+    "UnicodeWarning": {
+      "methods": {},
+      "doc": "Base class for warnings about Unicode related problems, mostly",
+      "module": "builtins"
+    },
+    "UserWarning": {
+      "methods": {},
+      "doc": "Base class for warnings generated by user code.",
+      "module": "builtins"
+    },
+    "ValueError": {
+      "methods": {},
+      "doc": "Inappropriate argument value (of correct type).",
+      "module": "builtins"
+    },
+    "Warning": {
+      "methods": {},
+      "doc": "Base class for warning categories.",
+      "module": "builtins"
+    },
+    "WindowsError": {
+      "methods": {},
+      "doc": "Base class for I/O related errors.",
+      "module": "builtins"
+    },
+    "ZeroDivisionError": {
+      "methods": {},
+      "doc": "Second argument to a division or modulo operation was zero.",
+      "module": "builtins"
+    },
+    "bool": {
+      "methods": {},
+      "doc": "bool(x) -> bool",
+      "module": "builtins"
+    },
+    "bytearray": {
+      "methods": {},
+      "doc": "bytearray(iterable_of_ints) -> bytearray",
+      "module": "builtins"
+    },
+    "bytes": {
+      "methods": {},
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "module": "builtins"
+    },
+    "classmethod": {
+      "methods": {},
+      "doc": "classmethod(function) -> method",
+      "module": "builtins"
+    },
+    "complex": {
+      "methods": {},
+      "doc": "Create a complex number from a real part and an optional imaginary part.",
+      "module": "builtins"
+    },
+    "dict": {
+      "methods": {},
+      "doc": "dict() -> new empty dictionary",
+      "module": "builtins"
+    },
+    "enumerate": {
+      "methods": {},
+      "doc": "Return an enumerate object.",
+      "module": "builtins"
+    },
+    "filter": {
+      "methods": {},
+      "doc": "filter(function or None, iterable) --> filter object",
+      "module": "builtins"
+    },
+    "float": {
+      "methods": {},
+      "doc": "Convert a string or number to a floating point number, if possible.",
+      "module": "builtins"
+    },
+    "frozenset": {
+      "methods": {},
+      "doc": "frozenset() -> empty frozenset object",
+      "module": "builtins"
+    },
+    "int": {
+      "methods": {},
+      "doc": "int([x]) -> integer",
+      "module": "builtins"
+    },
+    "list": {
+      "methods": {},
+      "doc": "Built-in mutable sequence.",
+      "module": "builtins"
+    },
+    "map": {
+      "methods": {},
+      "doc": "map(func, *iterables) --> map object",
+      "module": "builtins"
+    },
+    "memoryview": {
+      "methods": {},
+      "doc": "Create a new memoryview object which references the given object.",
+      "module": "builtins"
+    },
+    "object": {
+      "methods": {},
+      "doc": "The base class of the class hierarchy.",
+      "module": "builtins"
+    },
+    "property": {
+      "methods": {},
+      "doc": "Property attribute.",
+      "module": "builtins"
+    },
+    "range": {
+      "methods": {},
+      "doc": "range(stop) -> range object",
+      "module": "builtins"
+    },
+    "reversed": {
+      "methods": {},
+      "doc": "Return a reverse iterator over the values of the given sequence.",
+      "module": "builtins"
+    },
+    "set": {
+      "methods": {},
+      "doc": "set() -> new empty set object",
+      "module": "builtins"
+    },
+    "slice": {
+      "methods": {},
+      "doc": "slice(stop)",
+      "module": "builtins"
+    },
+    "staticmethod": {
+      "methods": {},
+      "doc": "staticmethod(function) -> method",
+      "module": "builtins"
+    },
+    "str": {
+      "methods": {},
+      "doc": "str(object='') -> str",
+      "module": "builtins"
+    },
+    "super": {
+      "methods": {},
+      "doc": "super() -> same as super(__class__, <first argument>)",
+      "module": "builtins"
+    },
+    "tuple": {
+      "methods": {},
+      "doc": "Built-in immutable sequence.",
+      "module": "builtins"
+    },
+    "type": {
+      "methods": {},
+      "doc": "type(object) -> the object's type",
+      "module": "builtins"
+    },
+    "zip": {
+      "methods": {},
+      "doc": "zip(*iterables, strict=False) --> Yield tuples until an input is exhausted.",
+      "module": "builtins"
+    },
+    "HKEYType": {
+      "methods": {},
+      "doc": "PyHKEY Object - A Python object, representing a win32 registry key.",
+      "module": "winreg"
+    },
+    "error": {
+      "methods": {},
+      "doc": "Base class for I/O related errors.",
+      "module": "os"
+    },
+    "DirEntry": {
+      "methods": {},
+      "doc": "",
+      "module": "os"
+    },
+    "stat_result": {
+      "methods": {},
+      "doc": "stat_result: Result from stat, fstat, or lstat.",
+      "module": "os"
+    },
+    "statvfs_result": {
+      "methods": {},
+      "doc": "statvfs_result: Result from statvfs or fstatvfs.",
+      "module": "os"
+    },
+    "terminal_size": {
+      "methods": {},
+      "doc": "A tuple of (columns, lines) for holding terminal window size",
+      "module": "os"
+    },
+    "times_result": {
+      "methods": {},
+      "doc": "times_result: Result from os.times().",
+      "module": "os"
+    },
+    "uname_result": {
+      "methods": {},
+      "doc": "uname_result: Result from os.uname().",
+      "module": "os"
+    },
+    "struct_time": {
+      "methods": {},
+      "doc": "The time value as returned by gmtime(), localtime(), and strptime(), and",
+      "module": "time"
+    },
+    "ZipImportError": {
+      "methods": {},
+      "doc": "",
+      "module": "zipimport"
+    },
+    "zipimporter": {
+      "methods": {
+        "create_module": {
+          "signature": "(self, spec)",
+          "doc": "Use default semantics for module creation."
+        },
+        "exec_module": {
+          "signature": "(self, module)",
+          "doc": "Execute the module."
+        },
+        "find_loader": {
+          "signature": "(self, fullname, path=None)",
+          "doc": "find_loader(fullname, path=None) -> self, str or None."
+        },
+        "find_module": {
+          "signature": "(self, fullname, path=None)",
+          "doc": "find_module(fullname, path=None) -> self or None."
+        },
+        "find_spec": {
+          "signature": "(self, fullname, target=None)",
+          "doc": "Create a ModuleSpec for the specified module."
+        },
+        "get_code": {
+          "signature": "(self, fullname)",
+          "doc": "get_code(fullname) -> code object."
+        },
+        "get_data": {
+          "signature": "(self, pathname)",
+          "doc": "get_data(pathname) -> string with file data."
+        },
+        "get_filename": {
+          "signature": "(self, fullname)",
+          "doc": "get_filename(fullname) -> filename string."
+        },
+        "get_resource_reader": {
+          "signature": "(self, fullname)",
+          "doc": "Return the ResourceReader for a package in a zip file."
+        },
+        "get_source": {
+          "signature": "(self, fullname)",
+          "doc": "get_source(fullname) -> source string."
+        },
+        "invalidate_caches": {
+          "signature": "(self)",
+          "doc": "Reload the file data of the archive path."
+        },
+        "is_package": {
+          "signature": "(self, fullname)",
+          "doc": "is_package(fullname) -> bool."
+        },
+        "load_module": {
+          "signature": "(self, fullname)",
+          "doc": "load_module(fullname) -> module."
+        }
+      },
+      "doc": "zipimporter(archivepath) -> zipimporter object",
+      "module": "zipimport"
+    },
+    "BufferedIncrementalDecoder": {
+      "methods": {
+        "decode": {
+          "signature": "(self, input, final=False)",
+          "doc": ""
+        },
+        "getstate": {
+          "signature": "(self)",
+          "doc": ""
+        },
+        "reset": {
+          "signature": "(self)",
+          "doc": ""
+        },
+        "setstate": {
+          "signature": "(self, state)",
+          "doc": ""
+        }
+      },
+      "doc": "",
+      "module": "codecs"
+    },
+    "BufferedIncrementalEncoder": {
+      "methods": {
+        "encode": {
+          "signature": "(self, input, final=False)",
+          "doc": ""
+        },
+        "getstate": {
+          "signature": "(self)",
+          "doc": ""
+        },
+        "reset": {
+          "signature": "(self)",
+          "doc": ""
+        },
+        "setstate": {
+          "signature": "(self, state)",
+          "doc": ""
+        }
+      },
+      "doc": "",
+      "module": "codecs"
+    },
+    "Codec": {
+      "methods": {},
+      "doc": "",
+      "module": "encodings.cp949"
+    },
+    "CodecInfo": {
+      "methods": {},
+      "doc": "Codec details when looking up the codec registry",
+      "module": "codecs"
+    },
+    "IncrementalDecoder": {
+      "methods": {},
+      "doc": "",
+      "module": "encodings.cp949"
+    },
+    "IncrementalEncoder": {
+      "methods": {},
+      "doc": "",
+      "module": "encodings.cp949"
+    },
+    "StreamReader": {
+      "methods": {
+        "seek": {
+          "signature": "(self, offset, whence=0)",
+          "doc": " Set the input stream's current position."
+        }
+      },
+      "doc": "",
+      "module": "encodings.cp949"
+    },
+    "StreamReaderWriter": {
+      "methods": {
+        "read": {
+          "signature": "(self, size=-1)",
+          "doc": ""
+        },
+        "readline": {
+          "signature": "(self, size=None)",
+          "doc": ""
+        },
+        "readlines": {
+          "signature": "(self, sizehint=None)",
+          "doc": ""
+        },
+        "reset": {
+          "signature": "(self)",
+          "doc": ""
+        },
+        "seek": {
+          "signature": "(self, offset, whence=0)",
+          "doc": ""
+        },
+        "write": {
+          "signature": "(self, data)",
+          "doc": ""
+        },
+        "writelines": {
+          "signature": "(self, list)",
+          "doc": ""
+        }
+      },
+      "doc": " StreamReaderWriter instances allow wrapping streams which",
+      "module": "codecs"
+    },
+    "StreamRecoder": {
+      "methods": {
+        "read": {
+          "signature": "(self, size=-1)",
+          "doc": ""
+        },
+        "readline": {
+          "signature": "(self, size=None)",
+          "doc": ""
+        },
+        "readlines": {
+          "signature": "(self, sizehint=None)",
+          "doc": ""
+        },
+        "reset": {
+          "signature": "(self)",
+          "doc": ""
+        },
+        "seek": {
+          "signature": "(self, offset, whence=0)",
+          "doc": ""
+        },
+        "write": {
+          "signature": "(self, data)",
+          "doc": ""
+        },
+        "writelines": {
+          "signature": "(self, list)",
+          "doc": ""
+        }
+      },
+      "doc": " StreamRecoder instances translate data from one encoding to another.",
+      "module": "codecs"
+    },
+    "StreamWriter": {
+      "methods": {
+        "seek": {
+          "signature": "(self, offset, whence=0)",
+          "doc": ""
+        }
+      },
+      "doc": "",
+      "module": "encodings.cp949"
+    },
+    "CodecRegistryError": {
+      "methods": {},
+      "doc": "",
+      "module": "encodings"
+    },
+    "ABC": {
+      "methods": {},
+      "doc": "Helper class that provides a standard way to create an ABC using",
+      "module": "abc"
+    },
+    "ABCMeta": {
+      "methods": {
+        "register": {
+          "signature": "(cls, subclass)",
+          "doc": "Register a virtual subclass of an ABC."
+        }
+      },
+      "doc": "Metaclass for defining Abstract Base Classes (ABCs).",
+      "module": "abc"
+    },
+    "abstractclassmethod": {
+      "methods": {},
+      "doc": "A decorator indicating abstract classmethods.",
+      "module": "abc"
+    },
+    "abstractproperty": {
+      "methods": {},
+      "doc": "A decorator indicating abstract properties.",
+      "module": "abc"
+    },
+    "abstractstaticmethod": {
+      "methods": {},
+      "doc": "A decorator indicating abstract staticmethods.",
+      "module": "abc"
+    },
+    "BufferedIOBase": {
+      "methods": {},
+      "doc": "Base class for buffered IO objects.",
+      "module": "io"
+    },
+    "BufferedRWPair": {
+      "methods": {},
+      "doc": "A buffered reader and writer object together.",
+      "module": "io"
+    },
+    "BufferedRandom": {
+      "methods": {},
+      "doc": "A buffered interface to random access streams.",
+      "module": "io"
+    },
+    "BufferedReader": {
+      "methods": {},
+      "doc": "Create a new buffered reader using the given readable raw IO object.",
+      "module": "io"
+    },
+    "BufferedWriter": {
+      "methods": {},
+      "doc": "A buffer for a writeable sequential RawIO object.",
+      "module": "io"
+    },
+    "BytesIO": {
+      "methods": {},
+      "doc": "Buffered I/O implementation using an in-memory bytes buffer.",
+      "module": "io"
+    },
+    "FileIO": {
+      "methods": {},
+      "doc": "Open a file.",
+      "module": "io"
+    },
+    "IOBase": {
+      "methods": {},
+      "doc": "The abstract base class for all I/O classes.",
+      "module": "io"
+    },
+    "IncrementalNewlineDecoder": {
+      "methods": {},
+      "doc": "Codec used when reading a file in universal newlines mode.",
+      "module": "io"
+    },
+    "RawIOBase": {
+      "methods": {},
+      "doc": "Base class for raw binary I/O.",
+      "module": "io"
+    },
+    "StringIO": {
+      "methods": {},
+      "doc": "Text I/O implementation using an in-memory buffer.",
+      "module": "io"
+    },
+    "TextIOBase": {
+      "methods": {},
+      "doc": "Base class for text I/O.",
+      "module": "io"
+    },
+    "TextIOWrapper": {
+      "methods": {},
+      "doc": "Character and line based layer over a BufferedIOBase object, buffer.",
+      "module": "io"
+    },
+    "UnsupportedOperation": {
+      "methods": {},
+      "doc": "",
+      "module": "io"
+    },
+    "GenericAlias": {
+      "methods": {},
+      "doc": "Represent a PEP 585 generic type",
+      "module": "os"
+    },
+    "Mapping": {
+      "methods": {
+        "get": {
+          "signature": "(self, key, default=None)",
+          "doc": "D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None."
+        },
+        "items": {
+          "signature": "(self)",
+          "doc": "D.items() -> a set-like object providing a view on D's items"
+        },
+        "keys": {
+          "signature": "(self)",
+          "doc": "D.keys() -> a set-like object providing a view on D's keys"
+        },
+        "values": {
+          "signature": "(self)",
+          "doc": "D.values() -> an object providing a view on D's values"
+        }
+      },
+      "doc": "A Mapping is a generic container for associating key/value",
+      "module": "os"
+    },
+    "MutableMapping": {
+      "methods": {
+        "clear": {
+          "signature": "(self)",
+          "doc": "D.clear() -> None.  Remove all items from D."
+        },
+        "get": {
+          "signature": "(self, key, default=None)",
+          "doc": "D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None."
+        },
+        "items": {
+          "signature": "(self)",
+          "doc": "D.items() -> a set-like object providing a view on D's items"
+        },
+        "keys": {
+          "signature": "(self)",
+          "doc": "D.keys() -> a set-like object providing a view on D's keys"
+        },
+        "pop": {
+          "signature": "(self, key, default=<object object at 0x000002051F8340C0>)",
+          "doc": "D.pop(k[,d]) -> v, remove specified key and return the corresponding value."
+        },
+        "popitem": {
+          "signature": "(self)",
+          "doc": "D.popitem() -> (k, v), remove and return some (key, value) pair"
+        },
+        "setdefault": {
+          "signature": "(self, key, default=None)",
+          "doc": "D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D"
+        },
+        "update": {
+          "signature": "(self, other=(), /, **kwds)",
+          "doc": " D.update([E, ]**F) -> None.  Update D from mapping/iterable E and F."
+        },
+        "values": {
+          "signature": "(self)",
+          "doc": "D.values() -> an object providing a view on D's values"
+        }
+      },
+      "doc": "A MutableMapping is a generic container for associating",
+      "module": "os"
+    },
+    "PathLike": {
+      "methods": {},
+      "doc": "Abstract base class for implementing the file system path protocol.",
+      "module": "os"
+    }
+  },
+  "vars": {
+    "api_version": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "sys"
+    },
+    "argv": {
+      "doc": "Built-in mutable sequence.",
+      "type": "list",
+      "module": "sys"
+    },
+    "base_exec_prefix": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "base_prefix": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "builtin_module_names": {
+      "doc": "Built-in immutable sequence.",
+      "type": "tuple",
+      "module": "sys"
+    },
+    "byteorder": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "copyright": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "dllhandle": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "sys"
+    },
+    "dont_write_bytecode": {
+      "doc": "bool(x) -> bool",
+      "type": "bool",
+      "module": "sys"
+    },
+    "exec_prefix": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "executable": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "flags": {
+      "doc": "sys.flags",
+      "type": "flags",
+      "module": "sys"
+    },
+    "float_info": {
+      "doc": "sys.float_info",
+      "type": "float_info",
+      "module": "sys"
+    },
+    "float_repr_style": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "frozen": {
+      "doc": "bool(x) -> bool",
+      "type": "bool",
+      "module": "sys"
+    },
+    "frozen_dir": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "hash_info": {
+      "doc": "hash_info",
+      "type": "hash_info",
+      "module": "sys"
+    },
+    "hexversion": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "sys"
+    },
+    "implementation": {
+      "doc": "A simple attribute-based namespace.",
+      "type": "SimpleNamespace",
+      "module": "sys"
+    },
+    "int_info": {
+      "doc": "sys.int_info",
+      "type": "int_info",
+      "module": "sys"
+    },
+    "maxsize": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "sys"
+    },
+    "maxunicode": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "sys"
+    },
+    "meta_path": {
+      "doc": "Built-in mutable sequence.",
+      "type": "list",
+      "module": "sys"
+    },
+    "modules": {
+      "doc": "dict() -> new empty dictionary",
+      "type": "dict",
+      "module": "sys"
+    },
+    "orig_argv": {
+      "doc": "Built-in mutable sequence.",
+      "type": "list",
+      "module": "sys"
+    },
+    "path": {
+      "doc": "Common pathname manipulations, WindowsNT/95 version.",
+      "type": "module",
+      "module": "os"
+    },
+    "path_hooks": {
+      "doc": "Built-in mutable sequence.",
+      "type": "list",
+      "module": "sys"
+    },
+    "path_importer_cache": {
+      "doc": "dict() -> new empty dictionary",
+      "type": "dict",
+      "module": "sys"
+    },
+    "platform": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "platlibdir": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "prefix": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "pycache_prefix": {
+      "doc": "",
+      "type": "NoneType",
+      "module": "sys"
+    },
+    "stderr": {
+      "doc": "Character and line based layer over a BufferedIOBase object, buffer.",
+      "type": "TextIOWrapper",
+      "module": "sys"
+    },
+    "stdin": {
+      "doc": "Character and line based layer over a BufferedIOBase object, buffer.",
+      "type": "TextIOWrapper",
+      "module": "sys"
+    },
+    "stdlib_module_names": {
+      "doc": "frozenset() -> empty frozenset object",
+      "type": "frozenset",
+      "module": "sys"
+    },
+    "stdout": {
+      "doc": "Character and line based layer over a BufferedIOBase object, buffer.",
+      "type": "TextIOWrapper",
+      "module": "sys"
+    },
+    "thread_info": {
+      "doc": "sys.thread_info",
+      "type": "thread_info",
+      "module": "sys"
+    },
+    "version": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "marshal"
+    },
+    "version_info": {
+      "doc": "sys.version_info",
+      "type": "version_info",
+      "module": "sys"
+    },
+    "warnoptions": {
+      "doc": "Built-in mutable sequence.",
+      "type": "list",
+      "module": "sys"
+    },
+    "winver": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "sys"
+    },
+    "Ellipsis": {
+      "doc": "",
+      "type": "ellipsis",
+      "module": "builtins"
+    },
+    "False": {
+      "doc": "bool(x) -> bool",
+      "type": "bool",
+      "module": "builtins"
+    },
+    "None": {
+      "doc": "",
+      "type": "NoneType",
+      "module": "builtins"
+    },
+    "NotImplemented": {
+      "doc": "",
+      "type": "NotImplementedType",
+      "module": "builtins"
+    },
+    "True": {
+      "doc": "bool(x) -> bool",
+      "type": "bool",
+      "module": "builtins"
+    },
+    "HKEY_CLASSES_ROOT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "HKEY_CURRENT_CONFIG": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "HKEY_CURRENT_USER": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "HKEY_DYN_DATA": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "HKEY_LOCAL_MACHINE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "HKEY_PERFORMANCE_DATA": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "HKEY_USERS": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_ALL_ACCESS": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_CREATE_LINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_CREATE_SUB_KEY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_ENUMERATE_SUB_KEYS": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_EXECUTE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_NOTIFY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_QUERY_VALUE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_READ": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_SET_VALUE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_WOW64_32KEY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_WOW64_64KEY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "KEY_WRITE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_BINARY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_CREATED_NEW_KEY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_DWORD": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_DWORD_BIG_ENDIAN": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_DWORD_LITTLE_ENDIAN": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_EXPAND_SZ": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_FULL_RESOURCE_DESCRIPTOR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_LEGAL_CHANGE_FILTER": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_LEGAL_OPTION": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_LINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_MULTI_SZ": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_NONE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_NOTIFY_CHANGE_ATTRIBUTES": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_NOTIFY_CHANGE_LAST_SET": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_NOTIFY_CHANGE_NAME": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_NOTIFY_CHANGE_SECURITY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_NO_LAZY_FLUSH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPENED_EXISTING_KEY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPTION_BACKUP_RESTORE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPTION_CREATE_LINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPTION_NON_VOLATILE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPTION_OPEN_LINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPTION_RESERVED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_OPTION_VOLATILE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_QWORD": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_QWORD_LITTLE_ENDIAN": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_REFRESH_HIVE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_RESOURCE_LIST": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_RESOURCE_REQUIREMENTS_LIST": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_SZ": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "REG_WHOLE_HIVE_VOLATILE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "winreg"
+    },
+    "EX_OK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "F_OK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_APPEND": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_BINARY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_CREAT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_EXCL": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_NOINHERIT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_RANDOM": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_RDONLY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_RDWR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_SEQUENTIAL": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_SHORT_LIVED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_TEMPORARY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_TEXT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_TRUNC": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "O_WRONLY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "P_DETACH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "P_NOWAIT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "P_NOWAITO": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "P_OVERLAY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "P_WAIT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "R_OK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "TMP_MAX": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "W_OK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "X_OK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "environ": {
+      "doc": "",
+      "type": "_Environ",
+      "module": "os"
+    },
+    "altzone": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "time"
+    },
+    "daylight": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "time"
+    },
+    "timezone": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "time"
+    },
+    "tzname": {
+      "doc": "Built-in immutable sequence.",
+      "type": "tuple",
+      "module": "time"
+    },
+    "END_CENTRAL_DIR_SIZE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zipimport"
+    },
+    "MAX_COMMENT_LEN": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zipimport"
+    },
+    "STRING_END_ARCHIVE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "zipimport"
+    },
+    "alt_path_sep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "zipimport"
+    },
+    "cp437_table": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "zipimport"
+    },
+    "marshal": {
+      "doc": "This module contains functions that can read and write Python values in",
+      "type": "module",
+      "module": "zipimport"
+    },
+    "path_sep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "zipimport"
+    },
+    "sys": {
+      "doc": "This module provides access to some objects used or maintained by the",
+      "type": "module",
+      "module": "os"
+    },
+    "time": {
+      "doc": "This module provides various functions to manipulate time values.",
+      "type": "module",
+      "module": "zipimport"
+    },
+    "DEFLATED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "DEF_BUF_SIZE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "DEF_MEM_LEVEL": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "MAX_WBITS": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "ZLIB_RUNTIME_VERSION": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "zlib"
+    },
+    "ZLIB_VERSION": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "zlib"
+    },
+    "Z_BEST_COMPRESSION": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_BEST_SPEED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_BLOCK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_DEFAULT_COMPRESSION": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_DEFAULT_STRATEGY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_FILTERED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_FINISH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_FIXED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_FULL_FLUSH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_HUFFMAN_ONLY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_NO_COMPRESSION": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_NO_FLUSH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_PARTIAL_FLUSH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_RLE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_SYNC_FLUSH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "Z_TREES": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "zlib"
+    },
+    "BOM": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM32_BE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM32_LE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM64_BE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM64_LE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_BE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_LE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF16": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF16_BE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF16_LE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF32": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF32_BE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF32_LE": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "BOM_UTF8": {
+      "doc": "bytes(iterable_of_ints) -> bytes",
+      "type": "bytes",
+      "module": "codecs"
+    },
+    "builtins": {
+      "doc": "Built-in functions, types, exceptions, and other objects.",
+      "type": "module",
+      "module": "codecs"
+    },
+    "aliases": {
+      "doc": "",
+      "type": "module",
+      "module": "encodings"
+    },
+    "codecs": {
+      "doc": " codecs -- Python Codec Registry, API and helpers.",
+      "type": "module",
+      "module": "encodings.cp949"
+    },
+    "cp949": {
+      "doc": "",
+      "type": "module",
+      "module": "encodings"
+    },
+    "utf_8": {
+      "doc": "",
+      "type": "module",
+      "module": "encodings"
+    },
+    "codec": {
+      "doc": "",
+      "type": "MultibyteCodec",
+      "module": "encodings.cp949"
+    },
+    "mbc": {
+      "doc": "",
+      "type": "module",
+      "module": "encodings.cp949"
+    },
+    "DEFAULT_BUFFER_SIZE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "io"
+    },
+    "SEEK_CUR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "SEEK_END": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "SEEK_SET": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "os"
+    },
+    "abc": {
+      "doc": "Abstract Base Classes (ABCs) according to PEP 3119.",
+      "type": "module",
+      "module": "os"
+    },
+    "FILE_ATTRIBUTE_ARCHIVE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_COMPRESSED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_DEVICE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_DIRECTORY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_ENCRYPTED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_HIDDEN": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_INTEGRITY_STREAM": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_NORMAL": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_NOT_CONTENT_INDEXED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_NO_SCRUB_DATA": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_OFFLINE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_READONLY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_REPARSE_POINT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_SPARSE_FILE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_SYSTEM": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_TEMPORARY": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "FILE_ATTRIBUTE_VIRTUAL": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "IO_REPARSE_TAG_APPEXECLINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "IO_REPARSE_TAG_MOUNT_POINT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "IO_REPARSE_TAG_SYMLINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "SF_APPEND": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "SF_ARCHIVED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "SF_IMMUTABLE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "SF_NOUNLINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "SF_SNAPSHOT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_ATIME": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_CTIME": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_DEV": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_GID": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_INO": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_MODE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_MTIME": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_NLINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_SIZE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "ST_UID": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_ENFMT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IEXEC": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFBLK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFCHR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFDIR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFDOOR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFIFO": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFLNK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFPORT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFREG": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFSOCK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IFWHT": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IREAD": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IRGRP": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IROTH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IRUSR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IRWXG": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IRWXO": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IRWXU": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_ISGID": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_ISUID": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_ISVTX": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IWGRP": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IWOTH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IWRITE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IWUSR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IXGRP": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IXOTH": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "S_IXUSR": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_APPEND": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_COMPRESSED": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_HIDDEN": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_IMMUTABLE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_NODUMP": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_NOUNLINK": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "UF_OPAQUE": {
+      "doc": "int([x]) -> integer",
+      "type": "int",
+      "module": "stat"
+    },
+    "os": {
+      "doc": "OS routines for NT or Posix depending on what system we're on.",
+      "type": "module",
+      "module": "os.path"
+    },
+    "stat": {
+      "doc": "Constants/functions for interpreting results of os.stat() and os.lstat().",
+      "type": "module",
+      "module": "os.path"
+    },
+    "altsep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "curdir": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "defpath": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "devnull": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "extsep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "genericpath": {
+      "doc": "",
+      "type": "module",
+      "module": "os.path"
+    },
+    "pardir": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "pathsep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "sep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "supports_unicode_filenames": {
+      "doc": "bool(x) -> bool",
+      "type": "bool",
+      "module": "os.path"
+    },
+    "linesep": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "name": {
+      "doc": "str(object='') -> str",
+      "type": "str",
+      "module": "os"
+    },
+    "st": {
+      "doc": "Constants/functions for interpreting results of os.stat() and os.lstat().",
+      "type": "module",
+      "module": "os"
+    },
+    "supports_bytes_environ": {
+      "doc": "bool(x) -> bool",
+      "type": "bool",
+      "module": "os"
+    },
+    "supports_dir_fd": {
+      "doc": "set() -> new empty set object",
+      "type": "set",
+      "module": "os"
+    },
+    "supports_effective_ids": {
+      "doc": "set() -> new empty set object",
+      "type": "set",
+      "module": "os"
+    },
+    "supports_fd": {
+      "doc": "set() -> new empty set object",
+      "type": "set",
+      "module": "os"
+    },
+    "supports_follow_symlinks": {
+      "doc": "set() -> new empty set object",
+      "type": "set",
+      "module": "os"
+    }
+  }
+}
