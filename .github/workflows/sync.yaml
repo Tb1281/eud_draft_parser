@@ -23,10 +23,6 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-    # - name: Set up PowerShell
-    #   run: |
-    #     $ErrorActionPreference = "Stop"
         
     - name: Get all releases from another repo
       run: |
@@ -46,42 +42,44 @@ jobs:
           $json_name = "$release.json"
           $zip_url = "https://github.com/$repo/releases/download/$release/$zip_name"
           $zip_output = "$zip_name"
-          $exe_output_folder = "$release"
-          $json_output = "$exe_output_folder\$json_name"
-          echo $zip_url
+          $exe_output_folder = "$zip_output" -replace ".zip", ""
 
           # zip 파일 다운로드
           Invoke-WebRequest -Uri $zip_url -OutFile $zip_output
           
-          # zip 파일 압축 풀기
-          Write-Host "Extracting $zip_name"
-          Expand-Archive -Path $zip_output -DestinationPath $exe_output_folder -Force
+          if (Test-Path $zip_name) {
+            # zip 파일 압축 풀기
+            Write-Host "Extracting $zip_name"
+            Expand-Archive -Path $zip_output -DestinationPath $exe_output_folder -Force
 
-          # 압축이 풀린 폴더에서 exe 파일 찾기
-          $exe_path = Get-ChildItem -Path $exe_output_folder -Filter "$exe_name" | Select-Object -First 1
+            # 압축이 풀린 폴더에서 exe 파일 찾기
+            $exe_path = Get-ChildItem -Path $exe_output_folder -Filter "$exe_name" | Select-Object -First 1
 
-          if ($exe_path) {
-            Write-Host "Running $exe_name"
-            # exe 파일 실행
-            Start-Process -FilePath $exe_path.FullName -ArgumentList '.\EUDEditor.eds' -Wait
-            Rename-Item -Path '.\completions.json' -NewName 'json_name'
-            
-            # 실행 후 JSON 파일 존재하는지 확인
-            if (Test-Path $json_output) {
-              Write-Host "$json_name exists. Committing to repo."
-
-              # JSON 파일을 커밋하고 푸시
-              git add $json_output
-              git commit -m "$release"
-              # git push origin HEAD:${{ github.ref_name }}
+            if ($exe_path) {
+              Write-Host "Running $exe_name"
+              # exe 파일 실행
+              Start-Process -FilePath $exe_path.FullName -ArgumentList '.\EUDEditor.eds' -Wait
+              Rename-Item -Path '.\completions.json' -NewName $json_name
               
-              # 해당 릴리즈를 처리 완료로 기록
-              git tag $release
-              git push --tags
+              # 실행 후 JSON 파일 존재하는지 확인
+              if (Test-Path $json_name) {
+                Write-Host "$json_name exists. Committing to repo."
+
+                # JSON 파일을 커밋하고 푸시
+                git add $json_name
+                git commit -m "$release"
+                # git push origin HEAD:${{ github.ref_name }}
+                
+                # 해당 릴리즈를 처리 완료로 기록
+                git tag $release
+                git push --tags
+              } else {
+                Write-Host "JSON file not found after running $exe_name"
+              }
             } else {
-              Write-Host "JSON file not found after running $exe_name"
+              Write-Host "No exe file found in $zip_name"
             }
           } else {
-            Write-Host "No exe file found in $zip_name"
+            Write-Host "No zip file found"
           }
         }

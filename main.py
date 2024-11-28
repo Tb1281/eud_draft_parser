@@ -92,27 +92,30 @@ class CompletionGenerator:
         return module_info
     
     def scan_libraries(self):
-        for module_name, module in sys.modules.items():
-            # private 멤버는 건너뜀
-            if module_name.startswith('_'):
-                continue
-            try:
-                # 모듈에 대한 함수 목록을 추출
-                if module:
-                    module_info = self.analyze_module(module_name, module)
-                
-                    # 라이브러리 정보 저장
-                    self.completions["libraries"][module_name] = {
-                        "type": "module",
-                        "doc": str(module.__doc__).split('\n')[0] if module.__doc__ else ""
-                    }
-                    # 함수와 클래스 정보 저장
-                    self.completions["functions"].update(module_info["functions"])
-                    self.completions["classes"].update(module_info["classes"])
-                    self.completions["vars"].update(module_info["vars"])
-            except Exception as e:
-                # 오류가 발생한 모듈은 건너뜀
-                continue
+        try:
+            for module_name, module in sys.modules.items():
+                # private 멤버는 건너뜀
+                if module_name.startswith('_'):
+                    continue
+                try:
+                    # 모듈에 대한 함수 목록을 추출
+                    if module:
+                        module_info = self.analyze_module(module_name, module)
+                    
+                        # 라이브러리 정보 저장
+                        self.completions["libraries"][module_name] = {
+                            "type": "module",
+                            "doc": str(module.__doc__).split('\n')[0] if module.__doc__ else ""
+                        }
+                        # 함수와 클래스 정보 저장
+                        self.completions["functions"].update(module_info["functions"])
+                        self.completions["classes"].update(module_info["classes"])
+                        self.completions["vars"].update(module_info["vars"])
+                except Exception as e:
+                    # 오류가 발생한 모듈은 건너뜀
+                    continue
+        except Exception as e:
+            print(e)
                 
     def save_completions(self, output_file):
         """결과를 JSON 파일로 저장"""
