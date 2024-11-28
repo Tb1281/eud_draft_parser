@@ -2201,7 +2201,7 @@
       "module": "importlib.util"
     },
     "spec_from_file_location": {
-      "signature": "(name, location=None, *, loader=None, submodule_search_locations=<object object at 0x00000181AC0640F0>)",
+      "signature": "(name, location=None, *, loader=None, submodule_search_locations=<object object at 0x00000213C8B440F0>)",
       "doc": "Return a module spec based on a file location.",
       "module": "importlib.util"
     },
@@ -2386,7 +2386,7 @@
       "module": "pickle"
     },
     "create_connection": {
-      "signature": "(address, timeout=<object object at 0x00000181AC064400>, source_address=None, *, all_errors=False)",
+      "signature": "(address, timeout=<object object at 0x00000213C8B44400>, source_address=None, *, all_errors=False)",
       "doc": "",
       "module": "ssl"
     },
@@ -3091,7 +3091,7 @@
       "module": "inspect"
     },
     "formatargvalues": {
-      "signature": "(args, varargs, varkw, locals, formatarg=<class 'str'>, formatvarargs=<function <lambda> at 0x00000181AE249080>, formatvarkw=<function <lambda> at 0x00000181AE249120>, formatvalue=<function <lambda> at 0x00000181AE2491C0>)",
+      "signature": "(args, varargs, varkw, locals, formatarg=<class 'str'>, formatvarargs=<function <lambda> at 0x00000213CACB9080>, formatvarkw=<function <lambda> at 0x00000213CACB9120>, formatvalue=<function <lambda> at 0x00000213CACB91C0>)",
       "doc": "",
       "module": "inspect"
     },
@@ -3116,7 +3116,7 @@
       "module": "inspect"
     },
     "getattr_static": {
-      "signature": "(obj, attr, default=<object object at 0x00000181AC0647B0>)",
+      "signature": "(obj, attr, default=<object object at 0x00000213C8B447B0>)",
       "doc": "",
       "module": "inspect"
     },
@@ -3701,7 +3701,7 @@
       "module": "difflib"
     },
     "IS_LINE_JUNK": {
-      "signature": "(line, pat=<built-in method match of re.Pattern object at 0x00000181AC9ADC40>)",
+      "signature": "(line, pat=<built-in method match of re.Pattern object at 0x00000213C93EDC40>)",
       "doc": "",
       "module": "difflib"
     },
@@ -3721,7 +3721,7 @@
       "module": "difflib"
     },
     "ndiff": {
-      "signature": "(a, b, linejunk=None, charjunk=<function IS_CHARACTER_JUNK at 0x00000181AE2CCEA0>)",
+      "signature": "(a, b, linejunk=None, charjunk=<function IS_CHARACTER_JUNK at 0x00000213CAD4CEA0>)",
       "doc": "",
       "module": "difflib"
     },
@@ -4581,7 +4581,7 @@
       "module": "freeze.freeze"
     },
     "f_bitlshift": {
-      "signature": "(a, b, _fdict={2: <eudplib.core.eudfunc.eudtypedfuncn.EUDTypedFuncN object at 0x00000181AE907550>}, **kwargs)",
+      "signature": "(a, b, _fdict={2: <eudplib.core.eudfunc.eudtypedfuncn.EUDTypedFuncN object at 0x00000213CB38B510>}, **kwargs)",
       "doc": "",
       "module": "freeze.freeze"
     },
@@ -5351,7 +5351,7 @@
       "module": "eudplib.collections.objpool"
     },
     "field": {
-      "signature": "(*, default=<dataclasses._MISSING_TYPE object at 0x00000181AE9BF190>, default_factory=<dataclasses._MISSING_TYPE object at 0x00000181AE9BF190>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x00000181AE9BF190>)",
+      "signature": "(*, default=<dataclasses._MISSING_TYPE object at 0x00000213CB43F190>, default_factory=<dataclasses._MISSING_TYPE object at 0x00000213CB43F190>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x00000213CB43F190>)",
       "doc": "",
       "module": "dataclasses"
     },
@@ -5901,7 +5901,7 @@
       "module": "shutil"
     },
     "copytree": {
-      "signature": "(src, dst, symlinks=False, ignore=None, copy_function=<function copy2 at 0x00000181AEB43C40>, ignore_dangling_symlinks=False, dirs_exist_ok=False)",
+      "signature": "(src, dst, symlinks=False, ignore=None, copy_function=<function copy2 at 0x00000213CB5C3C40>, ignore_dangling_symlinks=False, dirs_exist_ok=False)",
       "doc": "",
       "module": "shutil"
     },
@@ -5936,7 +5936,7 @@
       "module": "shutil"
     },
     "move": {
-      "signature": "(src, dst, copy_function=<function copy2 at 0x00000181AEB43C40>)",
+      "signature": "(src, dst, copy_function=<function copy2 at 0x00000213CB5C3C40>)",
       "doc": "",
       "module": "shutil"
     },
@@ -6461,7 +6461,7 @@
       "module": "urllib.parse"
     },
     "urlencode": {
-      "signature": "(query, doseq=False, safe='', encoding=None, errors=None, quote_via=<function quote_plus at 0x00000181AEE36D40>)",
+      "signature": "(query, doseq=False, safe='', encoding=None, errors=None, quote_via=<function quote_plus at 0x00000213CB8D6D40>)",
       "doc": "",
       "module": "urllib.parse"
     },
@@ -6916,7 +6916,7 @@
       "module": "ssl"
     },
     "get_server_certificate": {
-      "signature": "(addr, ssl_version=<_SSLMethod.PROTOCOL_TLS_CLIENT: 16>, ca_certs=None, timeout=<object object at 0x00000181AC064400>)",
+      "signature": "(addr, ssl_version=<_SSLMethod.PROTOCOL_TLS_CLIENT: 16>, ca_certs=None, timeout=<object object at 0x00000213C8B44400>)",
       "doc": "",
       "module": "ssl"
     },
@@ -7026,7 +7026,7 @@
       "module": "urllib.request"
     },
     "urlopen": {
-      "signature": "(url, data=None, timeout=<object object at 0x00000181AC064400>, *, cafile=None, capath=None, cadefault=False, context=None)",
+      "signature": "(url, data=None, timeout=<object object at 0x00000213C8B44400>, *, cafile=None, capath=None, cadefault=False, context=None)",
       "doc": "",
       "module": "autoupdate"
     },
@@ -7566,17 +7566,17 @@
       "module": "json.scanner"
     },
     "JSONArray": {
-      "signature": "(s_and_end, scan_once, _w=<built-in method match of re.Pattern object at 0x00000181AF010BA0>, _ws=' \\t\\n\\r')",
+      "signature": "(s_and_end, scan_once, _w=<built-in method match of re.Pattern object at 0x00000213CBAD4AD0>, _ws=' \\t\\n\\r')",
       "doc": "",
       "module": "json.decoder"
     },
     "JSONObject": {
-      "signature": "(s_and_end, strict, scan_once, object_hook, object_pairs_hook, memo=None, _w=<built-in method match of re.Pattern object at 0x00000181AF010BA0>, _ws=' \\t\\n\\r')",
+      "signature": "(s_and_end, strict, scan_once, object_hook, object_pairs_hook, memo=None, _w=<built-in method match of re.Pattern object at 0x00000213CBAD4AD0>, _ws=' \\t\\n\\r')",
       "doc": "",
       "module": "json.decoder"
     },
     "py_scanstring": {
-      "signature": "(s, end, strict=True, _b={'\"': '\"', '\\\\': '\\\\', '/': '/', 'b': '\\x08', 'f': '\\x0c', 'n': '\\n', 'r': '\\r', 't': '\\t'}, _m=<built-in method match of re.Pattern object at 0x00000181AEF5E200>)",
+      "signature": "(s, end, strict=True, _b={'\"': '\"', '\\\\': '\\\\', '/': '/', 'b': '\\x08', 'f': '\\x0c', 'n': '\\n', 'r': '\\r', 't': '\\t'}, _m=<built-in method match of re.Pattern object at 0x00000213CBA0E200>)",
       "doc": "",
       "module": "json.decoder"
     },
@@ -8648,7 +8648,7 @@
           "doc": "D.keys() -> a set-like object providing a view on D's keys"
         },
         "pop": {
-          "signature": "(self, key, default=<object object at 0x00000181AC0640C0>)",
+          "signature": "(self, key, default=<object object at 0x00000213C8B440C0>)",
           "doc": "D.pop(k[,d]) -> v, remove specified key and return the corresponding value."
         },
         "popitem": {
@@ -8943,7 +8943,7 @@
           "doc": "D.keys() -> a set-like object providing a view on D's keys"
         },
         "pop": {
-          "signature": "(self, key, default=<object object at 0x00000181AC0640C0>)",
+          "signature": "(self, key, default=<object object at 0x00000213C8B440C0>)",
           "doc": "D.pop(k[,d]) -> v, remove specified key and return the corresponding value."
         },
         "popitem": {
@@ -22576,7 +22576,7 @@
           "doc": ""
         },
         "open": {
-          "signature": "(self, fullurl, data=None, timeout=<object object at 0x00000181AC064400>)",
+          "signature": "(self, fullurl, data=None, timeout=<object object at 0x00000213C8B44400>)",
           "doc": ""
         }
       },
@@ -23626,7 +23626,7 @@
     "JSONDecoder": {
       "methods": {
         "decode": {
-          "signature": "(self, s, _w=<built-in method match of re.Pattern object at 0x00000181AF010BA0>)",
+          "signature": "(self, s, _w=<built-in method match of re.Pattern object at 0x00000213CBAD4AD0>)",
           "doc": ""
         },
         "raw_decode": {
