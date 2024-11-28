@@ -38,6 +38,7 @@ jobs:
             $releases += $current_releases
             $page++
         } while ($current_releases.Count -gt 0)
+        [Array]::Reverse($releases)
 
         # 각 릴리즈마다 작업 수행
         foreach ($release in $releases) {
